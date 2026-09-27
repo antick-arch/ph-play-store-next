@@ -1,5 +1,6 @@
 import React from "react";
 import TrandingAppsCard from "../trandingAppsCard/TrandingAppsCard";
+import Link from "next/link";
 
 const fetchApps = async () => {
   const res = await fetch("http://localhost:3000/data.json");
@@ -23,7 +24,7 @@ const TrandingApps = async () => {
         }
       </div>
       <div className="flex items-center justify-center">
-      <button className="btn btn-primary">Show All</button>
+      <Link href={"/apps"} className="btn btn-primary">Show All</Link>
       </div>
     </div>
   );

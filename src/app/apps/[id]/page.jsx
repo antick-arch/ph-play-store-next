@@ -10,7 +10,6 @@ const DetailsPage = async ({ params }) => {
   const { id } = await params;
   const apps = await fetchApps();
   const app = apps.find((item) => String(item.id) === String(id));
-  console.log(app);
   return (
     <div className="container mx-auto my-5 ">
       <div className="max-w-[30%] mx-auto space-y-5">
