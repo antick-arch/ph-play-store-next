@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaDownload, FaStar } from "react-icons/fa";
 
 const TrandingAppsCard = ({ app }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
+    <Link href={`/apps/${app.id}`} className="card bg-base-100 w-96 shadow-sm">
       <figure>
         <Image
           src={app.image}
@@ -27,7 +28,7 @@ const TrandingAppsCard = ({ app }) => {
           <div className="bg-orange-100 text-orange-500 border-none py-1 px-2 font-semibold rounded-[5px] flex justify-center items-center gap-1"><FaStar />{app.ratingAvg}</div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
