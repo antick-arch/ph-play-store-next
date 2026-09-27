@@ -14,7 +14,7 @@ const Banner = () => {
         <button className="btn">Play Store</button>
         <button className="btn">App Store</button>
       </div>
-      <Image src={bannerImg} alt="this is the banner image" className="mx-auto"></Image>
+      <Image loading="eager" src={bannerImg} alt="this is the banner image" className="mx-auto"></Image>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const GlobalNotFound = () => {
   return (
@@ -23,11 +24,11 @@ const GlobalNotFound = () => {
           </h2>
           <p style={{ maxWidth: 420, color: '#a3a3a3', marginTop: '1rem', lineHeight: 1.6 }}>
             We checked under the couch, behind the server, and inside the
-            database. Still nothing. Either it never existed, or it's really
+            database. Still nothing. Either it never existed, or it&apos;s really
             good at hide and seek.
           </p>
 
-          <a
+          <Link
             href="/"
             style={{
               marginTop: '2rem',
@@ -40,7 +41,7 @@ const GlobalNotFound = () => {
             }}
           >
             Take me somewhere real →
-          </a>
+          </Link>
         </div>
       </body>
     </html>
