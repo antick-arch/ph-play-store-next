@@ -1,13 +1,20 @@
-'use client'
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import Link from "next/link";
-const InstallNowApps = ({app}) => {
+import { InstallAppsContext } from "@/context/InstallAppsCreateContext";
+const InstallNowApps = ({ app }) => {
+  const {installNowApps,setinstallNowApps} = useContext(InstallAppsContext);
   const handleInstallApps = () => {
-    console.log("install btn clicked");
+    setinstallNowApps([...installNowApps, app]);
   };
+  console.log(installNowApps);
   return (
     <div className="flex justify-end">
-      <Link href={`/apps/${app.id}`} className="btn btn-primary" onClick={handleInstallApps}>
+      <Link
+        href={`/apps/${app.id}`}
+        className="btn btn-primary"
+        onClick={handleInstallApps}
+      >
         Install Now
       </Link>
     </div>
