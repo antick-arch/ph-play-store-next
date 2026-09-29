@@ -1,5 +1,5 @@
+import InstallNowApps from "@/components/installNowApps/InstallNowApps";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 const fetchApps = async () => {
   const res = await fetch("http://localhost:3000/data.json");
@@ -10,6 +10,7 @@ const DetailsPage = async ({ params }) => {
   const { id } = await params;
   const apps = await fetchApps();
   const app = apps.find((item) => String(item.id) === String(id));
+
   return (
     <div className="container mx-auto my-5 ">
       <div className="max-w-[30%] mx-auto space-y-5">
@@ -27,14 +28,10 @@ const DetailsPage = async ({ params }) => {
           <h2 className="font-bold text text-gray-500">
             Review: {app.reviews}
           </h2>
-          <h2 className="font-bold text text-gray-500">
-            Size: {app.size}
-          </h2>
+          <h2 className="font-bold text text-gray-500">Size: {app.size}</h2>
         </div>
         <p className="text-justify">{app.description}</p>
-        <div className="flex justify-end">
-          <Link href={"/"} className="btn btn-primary">Install Now</Link>
-        </div>
+        <InstallNowApps app={app}></InstallNowApps>
       </div>
     </div>
   );
