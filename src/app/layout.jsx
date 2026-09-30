@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       <InstallAppsContextProvider>
         <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-        {children}
+        {children}``
       <ToastContainer></ToastContainer>
         </body>
       </InstallAppsContextProvider>
