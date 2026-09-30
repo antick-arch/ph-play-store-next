@@ -9,7 +9,7 @@ export const useApps = () => {
   useEffect(() => {
     const fetchApps = async () => {
       try {
-        const res = await fetch("http://localhost:3000/data.json");
+        const res = await fetch("/data.json");
 
         if (!res.ok) {
           throw new Error("Failed to fetch apps");

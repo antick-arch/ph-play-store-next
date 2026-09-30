@@ -1,13 +1,8 @@
 import TrandingApps from "@/components/trandingApps/TrandingApps";
 import TrandingAppsCard from "@/components/trandingAppsCard/TrandingAppsCard";
+import apps from "@/data/apps";
 import React from "react";
-const fetchApps = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
-  const data = await res.json();
-  return data;
-};
 const AllApps = async() => {
-    const apps = await fetchApps();
   return (
     <div className="my-5">
       <div className="container mx-auto mb-5">

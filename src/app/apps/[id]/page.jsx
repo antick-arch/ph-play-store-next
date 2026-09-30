@@ -1,14 +1,9 @@
 import InstallNowApps from "@/components/installNowApps/InstallNowApps";
+import apps from "@/data/apps";
 import Image from "next/image";
 import React from "react";
-const fetchApps = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
-  const data = await res.json();
-  return data;
-};
 const DetailsPage = async ({ params }) => {
   const { id } = await params;
-  const apps = await fetchApps();
   const app = apps.find((item) => String(item.id) === String(id));
 
   return (

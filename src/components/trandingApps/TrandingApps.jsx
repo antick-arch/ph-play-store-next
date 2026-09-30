@@ -1,15 +1,9 @@
 import React from "react";
 import TrandingAppsCard from "../trandingAppsCard/TrandingAppsCard";
 import Link from "next/link";
-
-const fetchApps = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
-  const data = await res.json();
-  return data;
-};
+import apps from "@/data/apps";
 
 const TrandingApps = async () => {
-  const apps = await fetchApps();
   return (
     <div className="container mx-auto mb-5">
       <h2 className="text-4xl font-bold text-center">Trending apps</h2>
