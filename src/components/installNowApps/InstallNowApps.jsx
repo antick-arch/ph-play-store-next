@@ -1,24 +1,33 @@
 "use client";
 import React, { useContext } from "react";
-import Link from "next/link";
 import { InstallAppsContext } from "@/context/InstallAppsCreateContext";
 import { toast } from "react-toastify";
 const InstallNowApps = ({ app }) => {
-  const {installNowApps,setinstallNowApps} = useContext(InstallAppsContext);
+  const { installNowApps, setinstallNowApps } = useContext(InstallAppsContext);
+
   const handleInstallApps = () => {
-    setinstallNowApps([...installNowApps, app]);
+    const alreadyInstalled = installNowApps.some(
+      (installedApp) => installedApp.id === app.id
+    );
+
+    if (alreadyInstalled) {
+      toast.info("App is already installed");
+      return;
+    }
+
+    setinstallNowApps((previousApps) => [...previousApps, app]);
     toast.success("Added to installed section");
   };
-  console.log(installNowApps);
+
   return (
     <div className="flex justify-end">
-      <Link
-        href={`/apps/${app.id}`}
+      <button
+        type="button"
         className="btn btn-primary"
         onClick={handleInstallApps}
       >
         Install Now
-      </Link>
+      </button>
     </div>
   );
 };
