@@ -12,7 +12,7 @@ const TrandingApps = async () => {
         soluta consectetur culpa ipsa voluptatum modi, odit reiciendis id
         dignissimos!
       </p>
-      <div className="grid grid-cols-3 gap-5 my-10 place-items-center">
+      <div className="grid lg:grid-cols-3 gap-5 my-10 place-items-center p-5 lg:p-0">
         {
           apps.slice(0,6).map((app)=>(<TrandingAppsCard key={app.id} app={app}></TrandingAppsCard>))
         }

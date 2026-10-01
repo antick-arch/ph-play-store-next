@@ -1,10 +1,14 @@
 import InstallNowApps from "@/components/installNowApps/InstallNowApps";
 import apps from "@/data/apps";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import React from "react";
 const DetailsPage = async ({ params }) => {
   const { id } = await params;
   const app = apps.find((item) => String(item.id) === String(id));
+  if(!app){
+    notFound();
+  }
 
   return (
     <div className="container mx-auto my-5 ">
