@@ -1,37 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Play Store
+
+A practice project built with **Next.js** to explore modern React development, responsive UI design, and application structure.
+
+## Overview
+
+This project recreates the core experience of a digital app store. It was created as part of my Next.js practice to strengthen my skills with reusable components, page layouts, data rendering, and responsive interfaces.
+
+## Features
+
+- Responsive app store interface
+- Reusable React and Next.js components
+- App listings with details and categories
+- Clean, user-friendly layout
+- Optimized development workflow with Next.js
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- React
+- JavaScript
+- CSS / Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18 or later
+- npm, yarn, pnpm, or Bun
+
+### Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+git clone <repository-url>
+cd ph-play-store-next
+npm install
+```
+
+### Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Start the development server
+npm run build    # Create a production build
+npm run start    # Start the production server
+npm run lint     # Run lint checks
+```
 
-## Learn More
+## Project Purpose
 
-To learn more about Next.js, take a look at the following resources:
+This project is for learning and practice. It focuses on building confidence with Next.js fundamentals, component-based development, styling, and responsive design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Add search and filtering
+- Add authentication and user profiles
+- Connect the app to a backend API
+- Add app reviews and ratings
+- Improve accessibility and testing
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# ph-play-store-next
+This project is intended for educational purposes.
